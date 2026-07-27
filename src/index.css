@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── THE AGI DOSSIER design tokens (design.md §3) ── */
+    --ink: #0B0C0E;
+    --ink-2: #121318;
+    --ink-3: #1A1C22;
+    --bone: #E9E4D6;
+    --bone-dim: #9A968A;
+    --mute: #5C5F68;
+    --cn: #D63A2C;
+    --cn-deep: #8E2118;
+    --us: #2E6FE0;
+    --us-deep: #173A7A;
+    --gold: #C9A24B;
+    --jade: #35C48D;
+    --line: #262932;
+
+    /* shadcn tokens (kept for template ui components) */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.125rem;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 211.8 100% 97.6%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    background: var(--ink);
+  }
+  body {
+    @apply bg-ink text-bone font-sanssc antialiased;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--ink);
+  }
+  /* global paper-grain noise overlay (design.md §5) */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/noise.svg");
+    background-size: 256px 256px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 70;
+  }
+  /* custom reticle cursor replaces system cursor on fine pointers (design.md §6) */
+  @media (pointer: fine) {
+    body,
+    body a,
+    body button,
+    body [role="button"] {
+      cursor: none;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--ink);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border: 2px solid var(--ink);
+  }
+  :focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.2s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.2s !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* giant outline display type (Footer / quote wall bg) */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--line);
+  }
+  .text-outline-bone {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(233, 228, 214, 0.5);
+  }
+  /* halftone dot pattern used by the W2 CSS-fallback ink treatment */
+  .halftone-dots {
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1.4px);
+    background-size: 5px 5px;
+  }
+  .marquee-paused:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" fill="none">
+  <g transform="rotate(-8 110 55)" color="#D63A2C">
+    <ellipse cx="110" cy="55" rx="100" ry="46" stroke="currentColor" stroke-width="3" stroke-dasharray="140 6 90 4 200 8" stroke-linecap="round"/>
+    <ellipse cx="110" cy="55" rx="88" ry="35" stroke="currentColor" stroke-width="1.5" stroke-dasharray="120 5 70 3 160 6"/>
+    <text x="110" y="52" text-anchor="middle" font-family="'Noto Serif SC', serif" font-weight="900" font-size="26" fill="currentColor" letter-spacing="6">已核实</text>
+    <text x="110" y="76" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-weight="500" font-size="14" fill="currentColor" letter-spacing="4">VERIFIED</text>
+    <!-- ink chip defects -->
+    <rect x="18" y="48" width="14" height="6" fill="#0B0C0E" transform="rotate(-14 25 51)"/>
+    <rect x="188" y="60" width="12" height="5" fill="#0B0C0E" transform="rotate(9 194 62)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" fill="none">
+  <g color="#C9A24B">
+    <rect x="4" y="4" width="252" height="72" stroke="currentColor" stroke-width="1.5" stroke-dasharray="7 5"/>
+    <text x="130" y="36" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-weight="500" font-size="15" fill="currentColor" letter-spacing="3">DATA ANCHOR</text>
+    <text x="130" y="60" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-weight="400" font-size="17" fill="currentColor" letter-spacing="5">2026-07-23</text>
+    <circle cx="18" cy="18" r="2" fill="currentColor"/>
+    <circle cx="242" cy="62" r="2" fill="currentColor"/>
+  </g>
+</svg>
