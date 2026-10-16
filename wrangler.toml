@@ -1,0 +1,4 @@
+name = "cuagi"
+account_id = "74cfe9475d04f3a249e5911fc0f4ada3"
+compatibility_date = "2026-10-16"
+pages_build_output_dir = "./dist"
